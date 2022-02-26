@@ -1,0 +1,160 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap"); */
+
+
+body {
+  background: #ced3b5;
+  font-family: 'BenchNine', sans-serif;
+  color: #fefdfe;
+}
+h1 {
+  margin: 75px;
+  text-align: center;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+  font-size: 75px;
+}
+input {
+  transition: 0.5s ease-in-out;
+  margin: 10px 0;
+  font-size: 15px;
+  padding: 5px;
+  background: #eff2d6;
+  border: 2px solid #9c9c67;}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  margin: 35px 0;
+}
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+}
+label {
+  font-size: 20px;
+  text-shadow: bold;
+  font-weight: 2100000;
+}
+form {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-width: 370px;
+  margin: 5px auto;
+}
+/* save settings */
+form button {
+  background: #9c9c67;
+  width: 100%;
+  margin: 5px 0;
+  color: #fefdfe;
+}
+/* start focus button */
+.start {
+  background: #9c9c67;
+  color: #fefdfe;
+}
+/* start break button */
+.break {
+  background: #9c9c67;
+  color: #fefdfe;
+}
+/* reset button */
+.reset {
+  background: #9c9c67;
+  color: #fefdfe;
+}
+/* pause button */
+.pause {
+  background: #9c9c67;
+  color: #fefdfe;
+}
+.resume {
+  background:#9c9c67;
+  color: #fefdfe;
+}
+.clock {
+  padding: 3px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 30%;
+  font-size: 50px
+
+}
+.progress-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  height: 15rem;
+  border: 5px solid #eff2d6;
+  border-radius: 10rem;
+}
+
+.progress-ring__circle {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: #9c9c67;
+  border: 5px solid #eff2d6;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "head head"
+      "clock form"
+      "btns ji";
+  }
+  .btn-group {
+    grid-area: btns;
+    justify-content: center;
+    align-items: center;
+  }
+  .clock {
+    grid-area: clock;
+    height: 100%;
+    align-items: center;
+  }
+  h1 {
+    grid-area: head;
+    align-self: center;
+  }
+  form {
+    align-self: center;
+    justify-self: center;
+    grid-area: form;
+    width: 50%;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form {
+    height: 40%;
+  }
+  footer {
+    position: static;
+  }
+}
